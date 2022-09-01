@@ -1,7 +1,7 @@
 FROM ubuntu
 
 
-RUN sed -i 's#https://pypi.douban.com/simple/#' /etc/apt/sources.list;
+RUN sed -i 's#http://archive.ubuntu.com/#' /etc/apt/sources.list;
 RUN apt-get update
 RUN apt-get install sudo
 RUN sudo apt-get install curl
