@@ -1,20 +1,24 @@
 FROM ubuntu
 
 
-RUN sed  -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list 
+FROM ubuntu
+
 RUN apt-get update
 RUN apt-get install sudo
-RUN sudo apt-get install curl
-
-
 RUN sudo apt-get update
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' >/etc/timezone
 RUN apt-get install wget -y
 RUN apt-get install git -y
-Run sudo apt-get install unzip
+RUN apt-get install curl -y
+RUN apt-get install unzip -y
+RUN sudo apt install python3 -y
+RUN sudo apt install python3-dev -y
+RUN sudo apt install python3-pip -y
+RUN sudo apt install python3-pillow -y
+RUN sudo apt update
 
-RUN wget https://bootstrap.pypa.io/get-pip.py
-RUN sudo apt-get install python3-distutils -y
-RUN python3 get-pip.py
+
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install apscheduler
 
