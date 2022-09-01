@@ -21,6 +21,7 @@ RUN sudo apt update
 
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install apscheduler
+RUN pip3 install -i qbittorrent-api https://pypi.doubanio.com/simple
 
 RUN mkdir -p /qb
 RUN chown 0777 /qb/ -R
