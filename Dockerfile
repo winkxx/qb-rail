@@ -3,6 +3,7 @@ FROM ubuntu
 RUN mkdir -p /qb
 RUN chown 0777 /qb/ -R
 COPY root /qb/
+RUN sudo apt-get update
 RUN apt-get install sudo
 
 RUN sudo apt-get update
