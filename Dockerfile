@@ -2,7 +2,7 @@ FROM ubuntu
 
 
 RUN sudo apt-get update
-RUN apt-get install sudo
+RUN /bin/sh -c sudo apt-get update
 
 RUN sudo apt-get update
 RUN apt-get install wget -y
