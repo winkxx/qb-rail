@@ -1,5 +1,5 @@
 #!/bin/bash
-pip install qbittorrentapi
+pip install qbittorrent-api
 mkdir -p /config/
 chown 0777 /config/ -R
 mkdir -p /downloads/
