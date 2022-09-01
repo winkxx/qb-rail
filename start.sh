@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pip install qbittorrentapi
 mkdir -p /config/
 chown 0777 /config/ -R
 mkdir -p /downloads/
