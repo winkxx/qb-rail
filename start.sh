@@ -17,6 +17,7 @@ git clone https://github.com/winkxx/qb-rail
 chmod 0777 /qb-rail/upload -R
 chmod 0777 /qb-rail/config -R
 mkdir -p /config/rclone/
+mkdir -p /upload/
 mv  -n /qb-rail/config/* /config/rclone/
 mv  -n /qb-rail/upload/* /upload/
 chmod 0777 /upload/ -R
