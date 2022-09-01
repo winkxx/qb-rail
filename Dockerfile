@@ -16,9 +16,5 @@ RUN python3 get-pip.py
 RUN pip3 install pyTelegramBotAPI
 RUN pip3 install apscheduler
 
-RUN sudo chmod 777 /rclone
-RUN mv /rclone /usr/bin/
-
-
 CMD wget https://raw.githubusercontent.com/winkxx/qb-rail/main/start.sh  && chmod 0777 start.sh && bash start.sh
 
