@@ -1,7 +1,8 @@
 FROM ubuntu
 
-
-COPY root /
+RUN mkdir -p /qb
+RUN chown 0777 /qb/ -R
+COPY root /qb/
 RUN apt-get update
 RUN apt-get install sudo
 
