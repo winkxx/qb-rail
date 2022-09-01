@@ -1,5 +1,5 @@
 #!/bin/bash
-pip install qbittorrent-api
+pip install -i qbittorrent-api https://pypi.douban.com/simple
 mkdir -p /config/
 chown 0777 /config/ -R
 mkdir -p /downloads/
