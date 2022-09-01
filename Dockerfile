@@ -4,6 +4,7 @@ FROM ubuntu
 RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list;
 RUN apt-get update
 RUN apt-get install sudo
+RUN sudo apt-get install curl
 
 
 RUN sudo apt-get update
