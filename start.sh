@@ -1,19 +1,21 @@
 #!/bin/bash
 
-
+mkdir -p /config/
+chown 0777 /config/ -R
+mkdir -p /downloads/
+chown 0777 /downloads/ -R
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
 mkdir -p /config/qBittorrent/config/
 cp /usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/qBittorrent.conf
 fi
-
 # permissions
-chown 0777 -R /config \
-    /downloads
+#chown 0777 -R /config \
+    #/downloads
 
 git clone https://github.com/winkxx/qb-rail
-chmod 0777 /upload
-chmod 0777 /config
+chmod 0777 /qb-rail/upload -R
+chmod 0777 /qb-rail/config -R
 mkdir -p /config/rclone/
 mv  -n /qb-rail/config/* /config/rclone/
 mv  -n /qb-rail/upload/* /upload/
