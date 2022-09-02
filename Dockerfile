@@ -13,14 +13,13 @@ RUN apt-get install git -y
 RUN apt-get install curl -y
 RUN apt-get install unzip -y
 RUN sudo apt install python3 -y
-RUN sudo apt install python3-dev -y
-RUN sudo apt install python3-pip -y
-RUN sudo apt install python3-pillow -y
-RUN sudo apt update
-
-
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN sudo apt-get install python3-distutils -y
+RUN python3 get-pip.py
 RUN pip3 install pyTelegramBotAPI
+RUN pip3 install qbittorrent-api
 RUN pip3 install apscheduler
+
 
 
 RUN mkdir -p /qb
