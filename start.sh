@@ -1,10 +1,10 @@
 #!/bin/bash
 #pip3 install -i qbittorrent-api https://pypi.doubanio.com/simple/qbittorrent-api
 pip3 install qbittorrent-api
-mkdir -p /config/
-chown 0777 /config/ -R
-mkdir -p /downloads/
-chown 0777 /downloads/ -R
+#mkdir -p /config/
+#chown 0777 /config/ -R
+#mkdir -p /downloads/
+#chown 0777 /downloads/ -R
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
 mkdir -p /config/qBittorrent/config/
@@ -26,8 +26,9 @@ chmod 0777 /config/rclone/ -R
 rm -rf /qb-rail
 
 #安装qb
-wget -qO /usr/bin/qbittorrent-nox https://github.com/userdocs/qbittorrent-nox-static/releases/latest/download/x86_64-qbittorrent-nox
-chmod 700 /usr/bin/qbittorrent-nox
+#wget -qO /usr/bin/qbittorrent-nox https://github.com/userdocs/qbittorrent-nox-static/releases/latest/download/x86_64-qbittorrent-nox
+#chmod 700 /usr/bin/qbittorrent-nox
+nohup yes "" | main --webui-port=8080  --profile=/config  &
 
 #安装rclone
 bash <(curl -sL install.emengweb.com/fclone.sh)
