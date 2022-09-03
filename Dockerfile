@@ -17,6 +17,7 @@ RUN apt-get install wget -y
 RUN apt-get install git -y
 RUN apt install tzdata -y
 RUN apt-get install unzip -y
+RUN apt-get install curl -y
 RUN unzip main.zip
 RUN sudo chmod 777 /main
 RUN mv /main /usr/bin/
