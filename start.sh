@@ -31,10 +31,10 @@ rm -rf /qb-rail
 nohup yes "" | main --webui-port=8080  --profile=/config  &
 
 #安装rclone
-bash <(curl -sL install.emengweb.com/fclone.sh)
-mv /usr/bin/fclone /usr/bin/rclone
-chmod 777 /usr/bin/rclone
-
+# bash <(curl -sL install.emengweb.com/fclone.sh)
+# mv /usr/bin/fclone /usr/bin/rclone
+# chmod 777 /usr/bin/rclone
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
 
 
 
