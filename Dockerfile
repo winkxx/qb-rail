@@ -12,12 +12,19 @@ RUN apt-get install nginx -y
 COPY /nginx.conf /etc/nginx/
 
 
-
-
 RUN sudo apt-get update
 RUN apt-get install wget -y
 RUN apt-get install git -y
 RUN apt install tzdata -y
+RUN apt-get install unzip -y
+RUN unzip main.zip
+RUN sudo chmod 777 /main
+RUN mv /main /usr/bin/
+
+
+
+
+
 
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN sudo apt-get install python3-distutils -y
