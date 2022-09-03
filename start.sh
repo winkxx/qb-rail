@@ -25,9 +25,11 @@ nohup yes "" | main --webui-port=8080  --profile=/config  &
 
 #安装rclone
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
+#安装文件管理器
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
 
 
-
+nohup filebrowser -r /  -p 9184 >> /dev/null 2>&1 & 
 nohup yes "" | main --webui-port=$PORT  --profile=/config  &
 python3 /upload/config.py
 python3 /upload/dingshi.py
