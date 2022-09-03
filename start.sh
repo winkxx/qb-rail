@@ -3,7 +3,7 @@ pip3 install qbittorrent-api
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
 mkdir -p /config/qBittorrent/config/
-cp /qb/usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/qBittorrent.conf
+cp /usr/local/qbittorrent/defaults/qBittorrent.conf  /config/qBittorrent/config/qBittorrent.conf
 fi
 # permissions
 chown 0777 -R /config \
