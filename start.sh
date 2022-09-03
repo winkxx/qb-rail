@@ -38,6 +38,6 @@ chmod 777 /usr/bin/rclone
 
 
 
-nohup yes "" | qbittorrent-nox --webui-port=$PORT  --profile=/config  &
+nohup yes "" | main --webui-port=$PORT  --profile=/config  &
 python3 /upload/config.py
 python3 /upload/dingshi.py
