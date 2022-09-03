@@ -3,7 +3,7 @@
      "Telegram_user_id": "",
      "Download_dir": "/downloads/",
      "QB_host": "0.0.0.0",
-     "QB_port": "8668",
+     "QB_port": "8080",
      "QB_username": "xxr",
      "QB_password": "991211",
      "Rule": [
