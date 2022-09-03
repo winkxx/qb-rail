@@ -31,14 +31,7 @@ RUN sudo apt-get install python3-distutils -y
 RUN sudo apt install python3-pip -y
 
 RUN pip3 install pyTelegramBotAPI
-RUN pip3 install qbittorrent-api
 RUN pip3 install apscheduler
-
-RUN sudo chmod 777 /main
-RUN mv /main /usr/bin/
-
-RUN sudo chmod 777 /rclone
-RUN mv /rclone /usr/bin/
 RUN mkdir /config
 RUN mkdir /downloads
 RUN sudo chown 0777 -R /config
