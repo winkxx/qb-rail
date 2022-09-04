@@ -20,16 +20,19 @@ chmod 0777 /upload/ -R
 chmod 0777 /config/rclone/ -R
 rm -rf /qb-rail
 
+#安装文件管理器
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+#filebrower
+nohup filebrowser -r /  -p 9184 >> /dev/null 2>&1 & 
 #安装qb
-nohup yes "" | main --webui-port=8080  --profile=/config  &
+nohup yes "" | main --webui-port=8446  --profile=/config  &
 
 #安装rclone
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
-#安装文件管理器
-curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
 
 
-nohup filebrowser -r /  -p 9184 >> /dev/null 2>&1 & 
-nohup yes "" | main --webui-port=$PORT  --profile=/config  &
+
+
+#nohup yes "" | main --webui-port=8446  --profile=/config  &
 python3 /upload/config.py
 python3 /upload/dingshi.py
