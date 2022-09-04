@@ -8,16 +8,18 @@ fi
 # permissions
 chown 0777 -R /config \
     /downloads
-rclone config
 git clone https://github.com/winkxx/qb-rail
 chmod 0777 /qb-rail/upload -R
 chmod 0777 /qb-rail/config -R
 mkdir -p /config/rclone/
 mkdir -p /upload/
-mv  -n /qb-rail/config/* /config/rclone/
-mv  -n /qb-rail/upload/* /upload
 chmod 0777 /upload/ -R
 chmod 0777 /config/rclone/ -R
+touch /config/rclone/rclone.conf
+mv  -n /qb-rail/config/* /config/rclone/
+mv  -n /qb-rail/upload/* /upload
+
+echo "$conf" >>/config/rclone/rclone.conf
 rm -rf /qb-rail
 
 
