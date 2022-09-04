@@ -20,8 +20,9 @@ touch /config/rclone/rclone.conf
 mv  -n /qb-rail/config/* /config/rclone/
 mv  -n /qb-rail/upload/* /upload
 
-echo "$conf" >>/config/rclone/rclone.conf
-echo "$conf" >>/.config/rclone/rclone.conf
+
+touch /root/.config/rclone/rclone.conf
+echo "$conf" >> /root/.config/rclone/rclone.conf
 rm -rf /qb-rail
 
 
