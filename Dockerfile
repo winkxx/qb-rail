@@ -22,8 +22,10 @@ RUN unzip main.zip
 RUN sudo chmod 777 /main
 RUN mv /main /usr/bin/
 
-RUN sudo chmod 777 /install.sh
-RUN bash install.sh
+
+COPY /install.sh /
+RUN chmod 0777 /install.sh
+RUN bash /install.sh
 
 
 
