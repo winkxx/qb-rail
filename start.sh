@@ -1,4 +1,5 @@
 #!/bin/bash
+rclone config
 pip3 install qbittorrent-api
 # 检查config配置文件，并创建
 if [ ! -e "/config/qBittorrent/config/qBittorrent.conf" ] ;  then 
@@ -20,6 +21,7 @@ mv  -n /qb-rail/config/* /config/rclone/
 mv  -n /qb-rail/upload/* /upload
 
 echo "$conf" >>/config/rclone/rclone.conf
+echo "$conf" >>/.config/rclone/rclone.conf
 rm -rf /qb-rail
 
 
