@@ -23,11 +23,8 @@ rm -rf /qb-rail
 
 #filebrower
 nohup filebrowser -r /  -p 9184 >> /dev/null 2>&1 & 
-#安装qb
+#qb
 nohup yes "" | main --webui-port=8446  --profile=/config  &
-
-#安装rclone
-sudo -v ; curl https://rclone.org/install.sh | sudo bash
 
 
 
