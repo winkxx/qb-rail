@@ -8,7 +8,7 @@ fi
 # permissions
 chown 0777 -R /config \
     /downloads
-
+rclone config
 git clone https://github.com/winkxx/qb-rail
 chmod 0777 /qb-rail/upload -R
 chmod 0777 /qb-rail/config -R
